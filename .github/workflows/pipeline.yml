@@ -1,0 +1,26 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Node.js Package LH Http Request
+
+on:
+  push:
+    branches:
+      - master # Change this to your default branch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        always-auth: true
+        node-version: '12.x'
+        registry-url: 'https://npm.pkg.github.com'
+        # Defaults to the user or organization that owns the workflow file
+        scope: '@LucasHartridge'
+        
+    - run: npm install
+    - run: npm test
+    - run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,0 +1,49 @@
+{
+  "name": "lh-http-request",
+  "version": "0.0.1",
+  "description": "A library to handle HTTP requests",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "nyc mocha 'test/**/*.spec.js'",
+    "lint": "eslint lib/*.js",
+    "lint:show-unused-directives": "npm run lint -- --report-unused-disable-directives",
+    "posttest": "nyc report --reporter=text --reporter=lcov --reporter=text-summary"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@LucasHartridge"
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.js"
+    ],
+    "reporter": []
+  },
+  "author": "Lucas Hartridge",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test ",
+      "pre-push": "npm test"
+    }
+  },
+  "dependencies": {
+    "awilix": "4.2.6",
+    "axios": "0.19.2",
+    "axios-cookiejar-support": "1.0.0",
+    "dotenv": "8.2.0",
+    "@lucashartridge/eslint-config-lh": "0.0.2",
+    "form-data": "3.0.0",
+    "pino": "6.3.2",
+    "tough-cookie": "4.0.0",
+    "uuidv4": "6.1.1"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "chai-http": "4.3.0",
+    "chai-jest-snapshot": "2.0.0",
+    "husky": "4.2.5",
+    "mocha": "7.1.2",
+    "nyc": "15.1.0",
+    "sinon": "9.0.2"
+  }
+}

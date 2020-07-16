@@ -1,0 +1,12 @@
+# Visual Studio
+.vscode/
+
+# Dependency directory
+node_modules/
+
+# Coverage
+coverage/
+
+.idea
+.history
+.nyc_output
