@@ -9,9 +9,6 @@
     "lint:show-unused-directives": "npm run lint -- --report-unused-disable-directives",
     "posttest": "nyc report --reporter=text --reporter=lcov --reporter=text-summary"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@LucasHartridge"
-  },
   "nyc": {
     "include": [
       "lib/**/*.js"
@@ -31,7 +28,7 @@
     "axios": "0.19.2",
     "axios-cookiejar-support": "1.0.0",
     "dotenv": "8.2.0",
-    "@lucashartridge/eslint-config-lh": "0.0.2",
+    "eslint-configuration-lh": "0.0.1",
     "form-data": "3.0.0",
     "pino": "6.3.2",
     "tough-cookie": "4.0.0",
