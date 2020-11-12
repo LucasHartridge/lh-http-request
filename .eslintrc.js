@@ -1,5 +1,5 @@
 module.exports = {
   extends: [
-    'eslint-configuration-lh'
+    'lukahartridge'
   ],
 }

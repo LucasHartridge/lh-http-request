@@ -1,11 +1,12 @@
 {
   "name": "lh-http-request",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library to handle HTTP requests",
   "main": "lib/index.js",
   "scripts": {
+    "lint": "eslint \"lib/*.js\"",
+    "lint:fix": "eslint --fix \"lib/*.js\"",
     "test": "nyc mocha 'test/**/*.spec.js'",
-    "lint": "eslint lib/*.js",
     "lint:show-unused-directives": "npm run lint -- --report-unused-disable-directives",
     "posttest": "nyc report --reporter=text --reporter=lcov --reporter=text-summary"
   },
@@ -28,7 +29,7 @@
     "axios": "0.19.2",
     "axios-cookiejar-support": "1.0.0",
     "dotenv": "8.2.0",
-    "eslint-configuration-lh": "0.0.1",
+    "eslint-config-lukahartridge": "0.0.1",
     "form-data": "3.0.0",
     "pino": "6.3.2",
     "tough-cookie": "4.0.0",
